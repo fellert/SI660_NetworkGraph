@@ -7,7 +7,7 @@
 
 <body>
   <h1>What's your Rover?</h1>
-<svg width="1600" height="500"></svg>
+<svg width="1600" height="800"></svg>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
 
@@ -16,7 +16,7 @@ var svg = d3.select("svg"),
   height = +svg.attr("height");
 
 var simulation = d3.forceSimulation()
-  .force("link", d3.forceLink().id(function(d) { return d.id; }).distance(10).strength(0.05))
+  .force("link", d3.forceLink().id(function(d) { return d.id; }).distance(10).strength(0.08))
   .force("charge", d3.forceManyBody())
   .force("center", d3.forceCenter(width / 2, height / 2));
 
