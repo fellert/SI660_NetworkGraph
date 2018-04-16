@@ -16,7 +16,7 @@ var svg = d3.select("svg"),
   height = +svg.attr("height");
 
 var simulation = d3.forceSimulation()
-  .force("link", d3.forceLink().id(function(d) { return d.id; }).distance(10).strength(0.5))
+  .force("link", d3.forceLink().id(function(d) { return d.id; }).distance(10).strength(0.05))
   .force("charge", d3.forceManyBody())
   .force("center", d3.forceCenter(width / 2, height / 2));
 
